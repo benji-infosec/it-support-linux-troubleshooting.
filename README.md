@@ -1,5 +1,3 @@
-Here is the updated markdown code block with the commands (apt update, apt clean, apt upgrade, termux-setup-storage, etc.) wrapped in triple backticks so that they appear in clean, separate code boxes with easy copy buttons for anyone reading your GitHub repository:
-```markdown
 Linux Mobile Environment Recovery & Configuration
 
 Project Category: IT Support | Linux Troubleshooting | Systems Administration
@@ -142,7 +140,9 @@ Commands used during troubleshooting.
 Successful package updates and installations.
 Storage access configuration.
 The final working Linux environment.
+
 Author: Benji Infosec
+
 GitHub: benji-infosec
 ```
 
