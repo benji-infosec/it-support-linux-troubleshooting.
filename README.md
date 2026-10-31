@@ -14,117 +14,116 @@ The project demonstrates my developing skills in Linux command-line operations, 
 
 2. Tools and Technologies
 
-- Device: Android mobile device
-- Terminal: Termux
-- Linux distribution: Ubuntu through proot-distro
-- Package manager: APT
-- Version control: Git and GitHub
-- Commands: "apt update", "apt clean", "termux-setup-storage", and other Linux shell commands.
+- Android mobile device
+- Termux
+- Ubuntu through proot-distro
+- APT package manager
+- Git and GitHub
+- Linux terminal commands
 
 3. Problems Encountered
 
-During the configuration of my Linux environment, I encountered the following problems:
+During the configuration of my Linux environment, I encountered:
 
 - Package installation errors, including "E: Unable to locate package".
-- Repository update failures and mirror-related errors.
-- Permission errors when attempting to access shared device storage.
+- Repository update failures.
+- Storage permission problems.
 - Difficulty accessing project files from the terminal environment.
-
-These problems interrupted my development workflow and required systematic troubleshooting.
 
 4. Troubleshooting and Diagnosis
 
-I approached the problems by examining the error messages and testing the affected components.
+A. Updating Package Information
 
-A. Package Manager Investigation
-
-I checked the package manager and repository update process using:
+I used the following command to refresh package information:
 
 apt update
 
-I also investigated the package cache and repository configuration.
+B. Cleaning the Package Cache
 
-B. Storage Permission Investigation
-
-I examined the terminal's access to shared Android storage and investigated the permission problems affecting file access.
-
-C. Environment Investigation
-
-I considered possible causes such as repository connectivity, package index problems and storage access configuration.
-
-Note: A suspected cause should only be described as the confirmed root cause when supported by diagnostic evidence.
-
-5. Solutions and Commands
-
-A. Cleaning the APT Cache
+I used this command to clear downloaded package archives:
 
 apt clean
 
-This removes downloaded package archives from the local APT cache.
+C. Upgrading Installed Packages
 
-B. Refreshing Package Information
+To upgrade installed packages after refreshing the package information:
 
-apt update
+apt upgrade
 
-This refreshes the package information from configured repositories.
-
-If repository errors persist, the error message should be examined before selecting a specific corrective action.
-
-C. Configuring Termux Storage Access
+D. Configuring Android Storage Access
 
 In the main Termux environment, I used:
 
 termux-setup-storage
 
-This requests permission to access shared Android storage and configures the relevant storage links.
+This requests permission to access shared Android storage and creates the relevant storage links.
 
-Important: This is a Termux command. It should not be confused with commands executed inside the Ubuntu proot environment.
+Important: Run this command in Termux, not inside the Ubuntu proot environment.
 
-D. Checking File Permissions
+E. Checking Files and Directories
 
-I examined file and directory permissions using commands such as:
+To list files and directories:
+
+ls
+
+To display file permissions:
 
 ls -l
 
-Where necessary, permissions can be investigated with:
+To check the current working directory:
 
-chmod
+pwd
 
-The appropriate permission change depends on the actual file and the problem being investigated.
+5. Package Installation
+
+To install a package, use:
+
+apt install package-name
+
+Replace "package-name" with the actual package you want to install.
+
+For example, to install Git:
+
+apt install git
 
 6. Testing and Verification
 
-After troubleshooting, I worked towards confirming that the environment could perform its intended tasks.
+After troubleshooting, the following checks can be used to verify the environment:
 
-The verification checks to document include:
+Check the current Ubuntu version:
 
-- Whether package repository updates completed successfully.
-- Whether required packages could be installed.
-- Whether Termux could access shared Android storage.
-- Whether project files could be accessed from the terminal.
-- Whether Git operations and local development tasks worked correctly.
+cat /etc/os-release
 
-Screenshots and command outputs should be included as evidence of successful tests.
+Check the current user:
+
+whoami
+
+Check the current directory:
+
+pwd
+
+Check Git installation:
+
+git --version
+
+Document the actual results obtained from these commands.
 
 7. Technical Skills Demonstrated
 
-This project provided practical exposure to:
-
 - Linux command-line operations.
 - APT package management.
-- Basic Linux file permissions.
+- Basic file and directory permissions.
 - Android storage access configuration.
 - Termux environment management.
 - Ubuntu through proot-distro.
 - Troubleshooting and error investigation.
-- Technical documentation.
-- Git and GitHub.
+- Git and GitHub documentation.
 
 8. Lessons Learned
 
 Through this project, I developed a better understanding of how Linux environments operate on mobile devices.
 
-I also learned the importance of reading error messages carefully, investigating possible causes, testing solutions and verifying results rather than applying commands without understanding their purpose.
+I learned the importance of reading error messages carefully, investigating possible causes, testing solutions and verifying results rather than applying commands without understanding their purpose.
 
 9. Conclusion
 
@@ -134,7 +133,13 @@ It has strengthened my interest in troubleshooting, operating systems and techni
 
 10. Project Evidence
 
-Screenshots and supporting materials will be added to this repository to demonstrate the troubleshooting process, commands used and verified results.
+Screenshots and supporting materials will be added to this repository to demonstrate:
+
+- The original errors encountered.
+- Commands used during troubleshooting.
+- Successful package updates and installations.
+- Storage access configuration.
+- The final working Linux environment.
 
 Author: Benji Infosec
 GitHub: benji-infosec
